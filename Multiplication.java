@@ -1,4 +1,4 @@
-import java.awt.*;
+import java.util.*;
 class Multiplication{
     public static void main(String[] args){
         int a = 21;
