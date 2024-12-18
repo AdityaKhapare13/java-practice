@@ -18,7 +18,7 @@ class PrimeAdd{
         else{
             System.out.println("number is not a prime number");
         }
-
+        Sc.close();
 
         
     }
