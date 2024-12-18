@@ -1,57 +1,39 @@
-import java.util.Scanner;
+import java.util.*;
 class PrimeAdd{
     public static void main(String[] args){
         Scanner Sc = new Scanner(System.in);
-        System.out.println("Give the number : ");
-        int a = Sc.nextInt();
-        int d =Prime(a);
-        int rev = 0;
-        if (d == 1){
-            while(a != 0){
-                int digit = a % 10;
-                rev = digit + rev;
-                
+        System.out.println("Give the number: ");
+        int num = Sc.nextInt();
+        int isPrime =Prime(num);
+        int digitSum = 0;
+        if (isPrime == 1) {
+            int temp = num;  
+            while (temp != 0) {
+                int digit = temp % 10;
+                digitSum += digit;
+                temp = temp / 10;  
             }
-        }
-        System.out.println(rev);
-        //int m = add(d,a);
-        //System.out.println(m);
-
-
-
-
-    }
-    public static int Prime(int b){
-        int c = b;
-        int n = 0;
-        for (int i = 2; i == c; i++){
-            if (c%i== 0){
-                n= 1;
-            }
-            else{
-                n = 0;
-            }
-        }
-        return n;
-    }
-
-    /*public static int add(int e,int f){
-        int j=0;
-        
-        if(e==1){
-            int rev = 0;
-            while(f != 0){
-                int digit = f % 10;
-                rev = digit + rev;
-                
-            }
-            j = rev;
-            
+            System.out.println("Sum of digits is: "+digitSum);
         }
         else{
-            j= 0;
+            System.out.println("number is not a prime number");
         }
-        return j;
 
-    }*/
+
+        
+    }
+
+    public static int Prime(int b){
+        if(b <= 1){
+            return 0;
+        }
+        for (int i = 2; i <= Math.sqrt(b); i++) {
+            if (b % i == 0) {
+                return 0; 
+            }
+        }
+        return 1;
+
+
+    }
 }
