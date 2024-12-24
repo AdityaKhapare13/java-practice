@@ -36,6 +36,5 @@ class Student{
         System.out.println("Student id is : "+this.StudentId);
         System.out.println("Student name is : "+this.name);
         System.out.println("Student percentage is : "+this.Percentage);
-
     }
 }
