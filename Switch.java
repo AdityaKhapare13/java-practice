@@ -34,6 +34,6 @@ class Switch{
             }
             
         }
-        Sc.close;
+        Sc.close();
     }
 }
