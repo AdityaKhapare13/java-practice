@@ -6,6 +6,7 @@ public class c2 {
 	
 	public static void m1() {
 		System.out.println("C2 Method");
+		
 	}
 }
 
